@@ -1,3 +1,4 @@
+source 'https://code.stripe.com'
 source 'https://rubygems.org'
 
 ruby '2.1.5'
@@ -13,6 +14,7 @@ gem 'paperclip'
 gem 'paperclip-dropbox'
 gem 'figaro'
 gem 'devise'
+gem 'stripe'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
