@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   devise_for :users
   #include listings_id in url for orders pages
   resources :listings do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
 
   get 'pages/about'
   get 'pages/contact'
   get 'seller' => "listings#seller"
+  get 'sales' => "orders#sales"
+  get "purchases" => "orders#purchases"
   root "listings#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
