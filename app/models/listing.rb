@@ -1,13 +1,13 @@
 class Listing < ActiveRecord::Base
  #has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-   #if Rails.env.development?
-  # has_attached_file :image, :styles => { :medium => "200x200>", :thumb => "100x100>" }, :default_url=> "/images/default.png"
-  #else
- has_attached_file :image, :styles => { :medium => "200x200>", :thumb => "100x100>" }, :default_url=> "/images/default.png",
+  if Rails.env.development?
+    has_attached_file :image, :styles => { :medium => "200x200>", :thumb => "100x100>" }, :default_url=> "/images/default.png"
+  else
+    has_attached_file :image, :styles => { :medium => "200x200>", :thumb => "100x100>" }, :default_url=> "/images/default.png",
                      storage: :dropbox,
                      dropbox_credentials: Rails.root.join("config/dropbox.yml"),
                      path: ":style/:id_:filename"
-  #end
+  end
 
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 

@@ -11,7 +11,7 @@
     <tr>
       <td><%= link_to image_tag(listing.image.url(:thumb)), listing %></td>
       <td><%= listing.name %></td>
-      <td><%= listing.description %></td>
+      <td><%= listing.description.html_safe %></td>
       <td><%= number_to_currency(listing.price) %></td>
       <td>
         <div class="btn-group">
