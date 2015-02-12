@@ -15,6 +15,7 @@ gem 'paperclip-dropbox'
 gem 'figaro'
 gem 'devise'
 gem 'stripe'
+gem 'sprockets'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

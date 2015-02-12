@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'seller' => "listings#seller"
   get 'sales' => "orders#sales"
   get "purchases" => "orders#purchases"
+  get "bank" => "listings#bank"
   root "listings#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

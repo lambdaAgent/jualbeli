@@ -1,0 +1,25 @@
+
+
+      <div id="stripe_error" class="alert alert-danger alert-dismissable" style="display:none;">
+      <noscript>Javascript is not enabled and is required for this form. First enabled it in your web Browser settings.</noscript>
+      </div>
+
+      <h1>Bank Account Information</h1>
+
+      <div class="form-group">
+        <%= label_tag :country %>
+        <%= text_field_tag :country, nil, { :name => nil, :'data-stripe' => "country", class: "form-control"} %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :routing_number %>
+        <%= text_field_tag :routing_number, nil, { :name => nil, :'data-stripe' => "routingNumber", class: "form-control"} %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :account_number %>
+        <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control"} %>
+      </div>
+
+      <hr>
+      <div class="form-group">
+        <%= f.submit class:"btn btn-primary" %>
+      </div>

@@ -13,6 +13,7 @@ class ListingsController < ApplicationController
     @listings = Listing.all.order("created_at DESC")
   end
 
+
   # GET /listings/1
   # GET /listings/1.json
   def show
